@@ -1,0 +1,20 @@
+<form class='CatCardComponentClass' [formGroup]='catEditForm'>
+  <div class='cat-edit-form'>
+    <div class="form-title">
+      <input class="cat-name" formControlName="name" [disableControl]='isDisabledEdit' />
+      <img class='delete-btn' *ngIf='!isDisabledEdit' [src]="'./assets/x-button.svg'" alt='Удалить котика'
+        (click)='delete()'>
+      <img class='edit-btn' *ngIf='isDisabledEdit' [src]="'./assets/edit.svg'" alt='Редактировать котика' (click)='edit()'>
+    </div>
+    <input class='cat-img' [src]="selectedCatInfo?.img" alt="ЭТО КОТ" formControlName="img"
+      [disableControl]='isDisabledEdit' />
+    <input class="cat-like" type="number" min='0' formControlName='like' [disableControl]='isDisabledEdit' />
+    <textarea class="cat-description" formControlName='description' [disableControl]='isDisabledEdit'></textarea>
+    <div class="buttons">
+      <div *ngIf='!isDisabledEdit'>
+        <button class='accept' (click)='accept()' alt="'accept'">Сохранить</button>
+        <button class='cancel' (click)='cancel()'>Отмена</button>
+      </div>
+    </div>
+  </div>
+</form>

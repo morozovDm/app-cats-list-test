@@ -1,0 +1,12 @@
+.cats-viewer {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  cats-list {
+    width: 25%;
+    padding: 10px;
+  }
+  cat-card {
+    width: 70%;
+  }
+}

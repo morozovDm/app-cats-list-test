@@ -1,0 +1,11 @@
+.CatsListComponentClass {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #e9eef1;
+  border-radius: 10px;
+  .cat-list-item {
+    height: 100px;
+    margin: 10px;
+  }
+}

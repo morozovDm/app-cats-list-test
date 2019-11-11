@@ -1,0 +1,4 @@
+<div class="CatsListComponentClass">
+  <cats-list-item class='cat-list-item' *ngFor="let item of model$ | async" [catInfo]='item'
+    (selectedCat)='onSelectedCat($event)'></cats-list-item>
+</div>

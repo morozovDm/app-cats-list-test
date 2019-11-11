@@ -1,0 +1,4 @@
+<div class='cats-viewer'>
+  <cats-list (selectedCat)='openSelectedCatCard($event)'></cats-list>
+  <cat-card *ngIf="selectedCat" [selectedCatInfo]='selectedCat'></cat-card>
+</div>
